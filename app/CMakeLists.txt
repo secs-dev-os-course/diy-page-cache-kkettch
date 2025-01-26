@@ -12,5 +12,8 @@ target_include_directories(app PRIVATE ${CMAKE_SOURCE_DIR})
 
 target_sources(app
         PRIVATE
-        app.c # or app.cpp
+        app.cpp # or app.c
 )
+
+# add_executable(test_bench test_bench.cpp)
+# target_include_directories(test_bench PRIVATE ${CMAKE_SOURCE_DIR})
