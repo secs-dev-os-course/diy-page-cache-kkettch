@@ -6,7 +6,7 @@
 
 #define BLOCK_SIZE (16 * 1024)  // 16 KB
 
-BlockCache cache = create_block_cache(BLOCK_SIZE, 100);
+BlockCache cache = create_block_cache(BLOCK_SIZE, 512);
 
 void IoThptReadWithCache(const std::string &file_path) {
 

@@ -21,6 +21,8 @@ struct BlockCache {
   std::list<CachedPage> cache;   
   std::unordered_map<int, off_t> fd_offsets;
   std::unordered_map<int, int> file_descriptors; 
+  std::unordered_map<int, ino_t> fd_to_inode;  
+  std::unordered_map<ino_t, std::unordered_map<off_t, std::list<CachedPage>::iterator>> inode_cache_map; // Cache pages by inode
 };
 
 CachedPage create_cached_page(off_t offset, size_t block_size, int fd);
